@@ -1,5 +1,5 @@
 import streamlit as st 
-from st_files_connection import FilesConnection
+from st_files_connection as stfc
 import pandas as pd 
 import numpy as np
 # import scipy as sp
@@ -21,10 +21,15 @@ st.write("Specify input conditions (parameters)")
 bucket_name = 'churn-challenge'
 file_key = 'churn-challenge/cleaned_data.csv'
 
-conn = st.connection('s3', type=FilesConnection)
+conn = stfc.connect("s3")
 
-df = conn.read("churn-challenge/clean_data.csv", ttl=600)
-freq_dict = conn.read("churn-challenge/freq_dict.json", ttl=600)
+# Define the S3 file path
+model_file_path = "s3://churn-challenge/clean_data.csv"
+dict_file_path = "s3://churn-challenge/freq_dict.json"
+
+# Read the CSV file from S3
+df = conn.read(model_file_path, ttl=600)
+freq_dict = conn.read(dict_file_path, ttl=600)
 # fe_pipe = conn.read("churn-challenge/fe_pipe.pkl", ttl=600)
 # model = conn.read("churn-challenge/xgb3.pkl", ttl=600)
 
