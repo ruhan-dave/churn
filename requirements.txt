@@ -10,3 +10,4 @@ st-files-connection
 json
 xgboost
 scikit-learn
+pickle
