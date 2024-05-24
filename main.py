@@ -33,8 +33,9 @@ freq_dict = conn.read("churn-challenge/freq_dict.json", input_format="json", ttl
 del df["Unnamed: 0"]
 # load saved model
 # show team how to make a bucket with the secret key, etc.
-s3 = boto3.resource('s3')
 
+s3 = boto3.resource('s3')
+   
 with BytesIO() as mod:
    s3.Bucket("churn-challenge").download_fileobj("model.pkl", mod)
    mod.seek(0)    # move back to the beginning after writing
