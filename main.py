@@ -1,5 +1,5 @@
 import streamlit as st 
-import st_files_connection as stfc
+from st_files_connection import FilesConnection
 import pandas as pd 
 import numpy as np
 # import scipy as sp
