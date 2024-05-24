@@ -7,7 +7,7 @@ import pickle
 # import datetime as dt
 import json
 import xgboost as xgb
-import scikit-learn as sklearn
+import sklearn
 import boto3
 from io import BytesIO
 # from io import StringIO
