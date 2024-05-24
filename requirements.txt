@@ -7,3 +7,6 @@ streamlit
 s3fs
 boto3
 st-files-connection
+json
+xgboost
+scikit-learn
