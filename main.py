@@ -67,7 +67,7 @@ def user_inputs():
     joining_date = st.number_input("Date joined: YYYYMMDD")
     avg_time_spent = st.slider("Average time spent", min_value=np.min(df["avg_time_spent"]), max_value=np.max(df["avg_time_spent"]))
     avg_frequency_login_days = st.selectbox("Average login days", df["avg_frequency_login_days"].unique())
-    avg_transaction_value = st.number_input(f"Average Transaction value, between {np.min(df["avg_transaction_value"])} and {np.max(df["avg_transaction_value"])}")
+    avg_transaction_value = st.number_input(f"Average Transaction value, between {np.min(df['avg_transaction_value'])} and {np.max(df['avg_transaction_value"])}')
     # categorical 
     membership_category = st.selectbox("Select Membership Category", df["membership_category"].unique())
     feedback = st.selectbox("Select Feedback", df["feedback"].unique())
