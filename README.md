@@ -1,5 +1,8 @@
 # churn
 
+Slides: https://docs.google.com/presentation/d/13Gn8FUjrlsuypsWgiI9v6VZoiQY8acOq8UMfLgTDu8E/edit?usp=sharing
+Demo App with Streamlit: https://customer-churn-risk.streamlit.app/
+
 1. Problem Statement
 
 Companies that have a subscription model heavily rely on customer royalty to thrive. However, it is not always clear why some customers decide to unsubcribe to services, even if they may provide reasons before they cancel their services. There is thus a need for data science to help companies predict if a particular customer is going to leave so they may do targeted marketing to prevent them from leaving. 
